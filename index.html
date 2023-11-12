@@ -2,60 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O&P</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="main.css">
+    
+    <title>Build a Survey Form using HTML and CSS</title>
+
 </head>
 <body>
-    <div class="img1">
-      <div class="ptext">
-       <span class="border">
-        Parallax Website
-       </span> 
-    </div>  
-    </div>
+    <h1>GeeksforGeeks Survey Form</h1>
 
-    <section class="section section-light">
-        <h2>Section One</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim id obcaecati ipsa nostrum excepturi nihil rerum sapiente fugiat modi odit beatae officia repellendus, laudantium eius eligendi blanditiis velit placeat deleniti vel expedita eum dolores praesentium illo? Error, explicabo. Sequi, in. Tenetur voluptatibus aut ipsum voluptates tempore animi vitae commodi iusto, autem facere atque, non maiores itaque fuga nisi consequuntur consequatur mollitia quia alias excepturi odio molestiae dicta. Assumenda vitae beatae porro consequatur voluptates obcaecati distinctio voluptas cupiditate deserunt, quos nobis consequuntur quo quidem dicta a sunt dolorem error maxime necessitatibus sapiente temporibus excepturi in. Inventore quisquam odit voluptatibus! Iste, recusandae.</p>
-    </section>
+    <!--Create Form-->
+    <form id="form">
+        
+         <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">Name</label>
 
-    <div class="img2">
-        <div class="ptext">
-         <span class="border trans">
-         Image Two Text
-         </span> 
-        </div>  
-    </div>
+            <!-- Input Type Text -->
+            <input type="text" id="name" placeholder="Enter your name"/>
+        </div>
 
-    <section class="section section-dark">
-        <h2>Section Two</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, itaque voluptas distinctio rerum ratione obcaecati, blanditiis cupiditate aperiam quaerat similique rem nisi illum inventore maiores a nam accusantium fuga quos vitae dignissimos sequi explicabo saepe aliquid. Soluta nihil ratione, cumque voluptatum error eum quis sint in perspiciatis reiciendis, cum modi dolor veritatis tempore esse enim saepe quos eligendi exercitationem nam.</p>
-    </section>
+        <div class="form-control">
+            <label for="email" id="label-email">Email</label>
 
-    <div class="img3">
-        <div class="ptext">
-         <span class="border trans">
-         Image Three Text
-         </span> 
-        </div>  
-    </div>
+            <!-- Input Type Email -->
+            <input type="email" id="email" placeholder="Enter your email"/>
+        </div>
+        
+        <div class="form-control">
+            <label for="age" id="age">Age</label>
 
-    <section class="section section-dark">
-        <h2>Section Three</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, itaque voluptas distinctio rerum ratione obcaecati, blanditiis cupiditate aperiam quaerat similique rem nisi illum inventore maiores a nam accusantium fuga quos vitae dignissimos sequi explicabo saepe aliquid. Soluta nihil ratione, cumque voluptatum error eum quis sint in perspiciatis reiciendis, cum modi dolor veritatis tempore esse enim saepe quos eligendi exercitationem nam.</p>
-    </section>
+            <!-- Input Type Age -->
+            <input type="text" id="age" placeholder="Enter your age"/>
+        </div>
 
-    <div class="img1">
-        <div class="ptext">
-         <span class="border">
-          LN Media
-         </span> 
-      </div>  
-      </div>
+        <div class="form-control">
+            <label for="role" id="label-role">
+                Which option best describes you?
+            </label>
 
+            <!-- Dropdown options (Tùy chọn thả xuống) -->
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select> 
 
+        </div>
 
+        <div class="form-control">
+            <label>
+                Would you recommend GeeksforGeeks 
+                to a friend? 
+            </label>
+
+            <!-- Input Type Radio Button -->
+            <label for="recommed1">
+                <input type="radio" id="recommed1" name="recommed">Yes</input>
+            </label>
+
+            <label for="recommed2">
+                <input type="radio" id="recommed2" name="recommed">No</input>
+            </label>
+            
+            <label for="recommed3">
+                <input type="radio" id="recommed3" name="recommed">Maybe</input>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label>Languages and Frameworks known
+                <small>(Check all that apply)</small>
+            </label>
+
+            <!-- Input Type Checkbox -->
+            <label for="inp1">
+                <input type="checkbox" name="inp">C</input>
+            </label>
+            <label for="inp2">
+                <input type="checkbox" name="inp">C++</input>
+            </label>
+            <label for="inp3">
+                <input type="checkbox" name="inp">C#</input>
+            </label>
+            <label for="inp4">
+                <input type="checkbox" name="inp">Java</input>
+            </label>
+            <label for="inp5">
+                <input type="checkbox" name="inp">Python</input>
+            </label>
+            <label for="inp6">
+                <input type="checkbox" name="inp">Javascript</input>
+            </label>
+            <label for="inp7">
+                <input type="checkbox" name="inp">React</input>
+            </label>
+            <label for="inp7">
+                <input type="checkbox" name="inp">Angular</input>
+            </label>
+            <label for="inp7">
+                <input type="checkbox" name="inp">Django</input>
+            </label>
+            <label for="inp7">
+                <input type="checkbox" name="inp">Spring</input>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+            placeholder="Enter your comment here">
+            </textarea>
+        </div>
+
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit
+        </button>
+        
+    </form>
 
     
 </body>
